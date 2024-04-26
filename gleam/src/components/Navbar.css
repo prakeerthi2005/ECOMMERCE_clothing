@@ -1,0 +1,80 @@
+/* Navbar.css */
+
+@font-face {
+  font-family: 'Lato Regular Italic';
+  src: url('../../public/fonts/Lato-Regular.ttf') format('truetype'); /* Adjust the path as needed */
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Fallback font */
+}
+
+.navbar {
+  background: linear-gradient(to right, #B76E79, #C0C0C0); /* Rose Gold and Silver gradient */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box Shadow */
+  border-radius: 8px; /* Border Radius */
+  position: relative; /* Relative positioning for overlay */
+  opacity: 0.9; /* Opacity */
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(183, 110, 121, 0.5) 0%, rgba(192, 192, 192, 0.2) 100%); /* Background Overlay */
+  z-index: -1;
+}
+
+.brand-text {
+  font-family: 'Lato Regular Italic', sans-serif; /* Use Lato Regular Italic font */
+  font-size: 40px;
+  color: #0a0a0a; /* White text color */
+  transition: transform 0.3s ease; /* Hover Effect */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* Hover Effects */
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+  transform: scale(1.1); /* Hover Effect */
+}
+
+/* Styles for Login link */
+.nav-links li.login {
+  margin-right: 20px;
+}
+
+.nav-links li.login a {
+  color: #0a0a0a;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* Hover Effects */
+}
+
+.nav-links li.login a:hover {
+  color: #ffd700;
+  transform: scale(1.1); /* Hover Effect */
+}
